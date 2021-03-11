@@ -23,15 +23,18 @@
     "prometheus-gc-stats": ">=0.6.1",
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
+    "redis": "^3.0.2",
     "to-time": "git://github.com/ApelSYN/to-time.git"
   },
   "devDependencies": {
+    "forever": "^3.0.4",
     "frisby": "^0.8.5",
     "get-port": "^3.0.0",
     "jasmine-node": "*"
   },
   "scripts": {
     "start": "node --harmony index.js",
+    "start:watch": "forever -w index.js",
     "test": "node --harmony ./node_modules/jasmine-node/lib/jasmine-node/cli.js spec"
   },
   "engines": {
